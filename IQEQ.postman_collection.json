@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "8bde78f4-045e-4591-b757-05c4f225c1fe",
+		"name": "IQEQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24017773"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/create-test/",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

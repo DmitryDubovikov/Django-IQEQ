@@ -4,6 +4,9 @@ from django.db import models
 class IQEQTest(models.Model):
     login = models.CharField(max_length=10, unique=True)
 
+    def __str__(self):
+        return f"IQEQ test of {self.login}"
+
 
 class IQTestResults(models.Model):
     login = models.ForeignKey(IQEQTest, on_delete=models.CASCADE)
