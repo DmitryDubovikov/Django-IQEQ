@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import IQEQTest, IQTestResults, EQTestResults
 
 
-class IQEQSerializer(serializers.ModelSerializer):
+class IQEQTestSerializer(serializers.ModelSerializer):
     class Meta:
         model = IQEQTest
         fields = ["login"]

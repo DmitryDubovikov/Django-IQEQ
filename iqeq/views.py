@@ -6,7 +6,7 @@ import string
 import random
 from .models import IQEQTest, IQTestResults, EQTestResults
 from .serializers import (
-    IQEQSerializer,
+    IQEQTestSerializer,
     IQTestResultsSerializer,
     EQTestResultsSerializer,
 )
@@ -16,7 +16,7 @@ from .serializers import (
 def create_test(request):
     login = "".join(random.choices(string.ascii_letters, k=10))
     test = IQEQTest.objects.create(login=login)
-    serializer = IQEQSerializer(test)
+    serializer = IQEQTestSerializer(test)
     return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
