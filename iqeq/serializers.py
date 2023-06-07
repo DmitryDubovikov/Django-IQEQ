@@ -11,7 +11,8 @@ class IQEQSerializer(serializers.ModelSerializer):
 class IQTestResultsSerializer(serializers.ModelSerializer):
     class Meta:
         model = IQTestResults
-        fields = ["login", "score"]
+        fields = ["login", "score", "time_taken"]
+        read_only_fields = ("time_taken",)
 
 
 class EQTestResultsSerializer(serializers.ModelSerializer):
@@ -30,4 +31,5 @@ class EQTestResultsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = EQTestResults
-        fields = ["login", "letters"]
+        fields = ["login", "letters", "time_taken"]
+        read_only_fields = ("time_taken",)
