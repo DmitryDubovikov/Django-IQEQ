@@ -14,7 +14,7 @@ docker run --rm -d -p 5432:5432 -v my-postgres-data:/var/lib/postgresql/data --n
 
 
 
-docker build -t iqeq 
+docker build -t iqeq .
 docker run --name iqeq -p 8000:8000 -v C:\projects\Django-IQEQ:/app iqeq
 
 docker exec -it iqeq bash
