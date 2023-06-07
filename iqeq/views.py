@@ -1,3 +1,4 @@
+from django.http import HttpResponseBadRequest
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -37,10 +38,14 @@ def save_eq_test_results(request):
 
 @api_view(["GET"])
 def results(request):
-    eq_results = EQTestResults.objects.filter(login=request.data["login"])
+    login = request.data.get("login")
+    if not login:
+        return HttpResponseBadRequest("Отсутствует обязательный параметр 'login'")
+
+    eq_results = EQTestResults.objects.filter(login=login)
     eq_serializer = EQTestResultsSerializer(eq_results, many=True)
 
-    iq_results = IQTestResults.objects.filter(login=request.data["login"])
+    iq_results = IQTestResults.objects.filter(login=login)
     iq_serializer = IQTestResultsSerializer(iq_results, many=True)
     return Response(
         {"IQ results": iq_serializer.data, "EQ results": eq_serializer.data}
