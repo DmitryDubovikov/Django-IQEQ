@@ -7,10 +7,148 @@
 	},
 	"item": [
 		{
-			"name": "http://127.0.0.1:8000/api/create-test/",
+			"name": "create-test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/create-test/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-test",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save-iq",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "login",
+							"value": "vjiUYSXHdT",
+							"type": "text"
+						},
+						{
+							"key": "score",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/save-iq/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"save-iq",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save-eq",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "login",
+							"value": "xJHIHueJyq",
+							"type": "text"
+						},
+						{
+							"key": "letters",
+							"value": "абвга",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/save-eq/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"save-eq",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "results",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "login",
+							"value": "JsmgZUAHjx",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/results/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"results",
+						""
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "JsmgZUAHjx",
+							"disabled": true
+						}
+					]
+				}
 			},
 			"response": []
 		}
